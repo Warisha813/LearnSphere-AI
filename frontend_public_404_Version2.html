@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; URL=./index.html">
+    <script>
+      // Fallback redirect to index.html for SPA routes
+      (function () {
+        try {
+          var hash = location.hash || "";
+          location.replace('./index.html' + hash);
+        } catch (e) {
+          location.replace('./index.html');
+        }
+      })();
+    </script>
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>

@@ -1,0 +1,46 @@
+:root{
+  --bg:#f5f7fa;
+  --panel:#ffffff;
+  --muted:#6b7280;
+  --primary:#1f6feb;
+  --accent:#0ea5a4;
+  --shadow: 0 6px 18px rgba(32,33,36,0.06);
+  --glass: rgba(255,255,255,0.6);
+  --success:#10b981;
+}
+
+*{box-sizing:border-box}
+body,html,#root{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+body{background:linear-gradient(180deg,var(--bg),#eef2f7);color:#111827;}
+
+/* Layout */
+.app-root{display:flex;height:100vh;gap:20px}
+.sidebar{width:260px;background:var(--panel);padding:20px;border-radius:12px;margin:20px;box-shadow:var(--shadow)}
+.main{flex:1;display:flex;flex-direction:column;margin:20px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:var(--panel);border-radius:12px;box-shadow:var(--shadow)}
+.content{display:flex;gap:20px;margin-top:20px}
+.left-col{flex:1}
+.right-col{width:360px}
+
+/* Task cards */
+.task-list{display:flex;flex-direction:column;gap:12px}
+.task-card{background:linear-gradient(180deg, #fff, #fbfdff);padding:14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(16,24,40,0.03)}
+.task-meta{display:flex;flex-direction:column}
+.task-title{font-weight:600}
+.task-sub{font-size:12px;color:var(--muted)}
+.btn{padding:8px 12px;border-radius:8px;border:none;background:var(--primary);color:white;cursor:pointer}
+.btn-ghost{background:transparent;border:1px solid rgba(16,24,40,0.06)}
+.tag{background:#f3f4f6;padding:4px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+
+/* modal basic */
+.modal-content{background:var(--panel);padding:20px;border-radius:12px;max-width:520px}
+.inputs{display:flex;gap:8px;flex-direction:column}
+.input{padding:10px;border-radius:8px;border:1px solid rgba(16,24,40,0.06);background:transparent}
+
+/* small responsivity */
+@media (max-width:900px){
+  .sidebar{display:none}
+  .right-col{display:none}
+  .app-root{flex-direction:column}
+  .main{margin:12px}
+}
